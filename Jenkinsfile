@@ -7,9 +7,7 @@ pipeline {
                     // Clone the project
                     git 'https://github.com/Varsha195/docker_task_jenkins.git'
                 }
-
             }
-
         }
         stage('Build') {
             steps {
@@ -17,9 +15,7 @@ pipeline {
                     //Build the project
                     sh docker build -t jenkinsimg .
                 }
-
             }
-
         }
         stage('Run') {
             steps {
@@ -27,10 +23,7 @@ pipeline {
                     //Run the image
                     sh docker run -it jenkinsimg
                 }
-
             }
-
         }
-
     }
 }
