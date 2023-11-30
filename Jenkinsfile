@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     //Run the image
-                    sh 'docker run -it jenkinsimg'
+                    sh 'docker run -i jenkinsimg'
                 }
             }
         }
