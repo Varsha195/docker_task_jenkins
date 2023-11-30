@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Clone the project
-                    git clone https://github.com/Varsha195/docker_task_jenkins.git
+                    git 'https://github.com/Varsha195/docker_task_jenkins.git'
                 }
 
             }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     //Build the project
-                    docker build -t jenkinsimg .
+                    sh docker build -t jenkinsimg .
                 }
 
             }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     //Run the image
-                    docker run -it jenkinsimg
+                    sh docker run -it jenkinsimg
                 }
 
             }
